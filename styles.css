@@ -1,0 +1,267 @@
+/* styles.css */
+
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo del cuerpo */
+body {
+  background-color: #99c8ed;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo del encabezado */
+header {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding:2rem;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.logo {
+  height: auto;
+  width: 150px;
+
+}
+
+/* Estilo del área principal */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #99c8ed;
+  padding: 32px 100px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:2rem;
+  width: 40%;
+}
+
+/* Estilo del área de texto */
+.text-area {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border:none;
+  box-shadow: 0 4px 8px rgba(90, 117, 151, 0.1);
+  border-radius: 12px;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+/* Estilo de advertencia */
+.warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 5px;
+}
+
+.warning img {
+  width: 16px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.warning p {
+  color: #976d6d;;
+}
+
+/* Seccion botones */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 1rem;
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.btn-copy {
+  margin-top: 20px;
+  background-color: #49548e;
+  display:block;
+}
+
+.btn-copy:hover {
+  background-color: #0f5bac;
+}
+
+.copy{
+  display: flex;
+  justify-content: center
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background-color: #99c8ed;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.message h2 {
+  color:#0A3871;
+  margin-bottom: 10px;
+}
+
+.message p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.result-area {
+  width: 100%;
+  height: 80%;
+  border:none;
+  background-color: #99c8ed;
+  font-size: 1.5rem;
+  padding: 1rem;
+  resize: none;
+  outline: none;
+}
+
+.result-message {
+  width: 100%;
+  height: 100%;
+  display: flex;
+ 
+}
+
+.default-message {
+  display: block;
+  align-items: center;
+}
+
+.result-message {
+  display: none;
+}
+/* Responsivo para tablet */
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    padding: 16px;
+    gap:1rem;
+  }
+
+  .container {
+    width: 100%;
+
+  }
+
+  .message {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .message img {
+    display: none;
+  }
+
+  .result-message {
+    display: flex;
+  }
+
+  .btn-container {
+    gap:1rem;
+    width: 100%;
+
+  }
+
+}
+
+
+/* Responsivo para móvil */
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  main {
+    padding: 8px;
+    gap:1rem;
+  }
+
+  .container {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .text-area,
+  .result-area {
+    height: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .message {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .message img {
+    width: 100px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+}
